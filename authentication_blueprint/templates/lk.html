@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Личный кабинет</title>
+    <link href = "{{url_for('static', filename = 'style1.css')}}"
+          rel = "stylesheet" type = "text/css">
+</head>
+<body>
+<center>
+    <header>
+    <img src="../static/warehouse.png" align="left" class="logo">
+    <a href="{{url_for('auth_bp.lk_index')}}">
+        <img align ="right" src="../static/lk.png" class="lk" alt="Кнопка">
+    </a>
+    <h1>Склад</h1>
+    </header><br>
+    <h2>Вы авторизировались</h2>
+    личный кабинет<br><br>
+    <img src="../static/avatar.png" style="width: 200px; height: 200px;"><br>
+    {% if user_group %}
+    <h3>права: {{user_group}}</h3>
+        {% endif %}
+    <a href = "/exit" style="color: green;"><button>Выйти</button></a>
+    <a href = "/" style="color: #2271b3;"><button>Вернуться в главное меню</button></a>
+</center>
+
+</body>
+</html>

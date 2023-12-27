@@ -1,0 +1,1 @@
+select distinct year_supply, mounth_supply from $table;

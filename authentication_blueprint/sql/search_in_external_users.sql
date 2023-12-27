@@ -1,0 +1,1 @@
+select userid from external_users where login="$usr_login" and password="$usr_password"

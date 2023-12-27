@@ -1,0 +1,1 @@
+select userid, user_group from internal_users where login="$usr_login" and password="$usr_password"

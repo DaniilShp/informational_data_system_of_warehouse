@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>создать новый отчет</title>
+    <link href = "{{url_for('static', filename = 'style1.css')}}"
+          rel = "stylesheet" type = "text/css">
+</head>
+<body>
+<center>
+    <header>
+        <img src="../static/warehouse.png" align="left" class="logo">
+        <a href="{{url_for('auth_bp.lk_index')}}">
+        <img align ="right" src="../static/lk.png" class="lk" alt="Кнопка">
+    </a>
+        <h1>Склад</h1>
+    </header><br>
+    <h1></h1>
+    <h1>Создать {{report_info['title'].lower()}} в указанный период</h1>
+    <form action="" method=POST class="search_form">
+        <label for = "input1">{{report_info['input1']}}</label>
+        <input type="text" name="input1" id="input1" placeholder="{{report_info['placeholder1']}}">
+        {% if report_info['input2']%}
+        <br><br>
+        <label for = "input2">{{report_info['input2']}}</label>
+        <input type="text" name="input2" id="input2"><br><br>
+        {% endif %}
+        {% if error %}
+            <p style="color: red;">{{ error }}</p>
+        {% else %}
+            <br><br><br>
+        {% endif %}
+        <input type="submit" class="button" value="Отправить">
+        <input type="reset" class="button" value="Очистить">
+    </form><br>
+    <a href = "{{url_for('bp_report.reports_menu')}}" style="color: #2271b3;">Вернуться в меню отчетов</a><br>
+    <a href = "/" style="color: #2271b3;">Вернуться в главное меню</a>
+</center>
+</body>
+</html>

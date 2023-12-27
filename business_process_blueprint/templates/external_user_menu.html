@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu</title>
+  <link href = "{{url_for('static', filename = 'style1.css')}}"
+          rel = "stylesheet" type = "text/css">
+</head>
+<body>
+<center>
+  <header>
+        <img src="../static/warehouse.png" align="left" class="logo">
+        <a href="{{url_for('auth_bp.lk_index')}}">
+        <img align ="right" src="../static/lk.png" class="lk" alt="Кнопка">
+    </a>
+        <h1>Склад</h1>
+    </header><br>
+    <h2 style="color: black">Оформление поставок</h2>
+    <a style="text-decoration: none; color: black; font-size: 12pt"href="{{url_for('business_bp.register_invoice_index')}}"><button>
+        <b><center>Составить накладную</center></b></button></a><br><br>
+</center>
+</body>
+</html>

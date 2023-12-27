@@ -1,0 +1,1 @@
+select distinct year_activity,  mounth_activity from $table;

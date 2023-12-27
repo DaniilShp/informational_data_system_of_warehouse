@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>создать новый отчет</title>
+    <link href = "{{url_for('static', filename = 'style1.css')}}"
+          rel = "stylesheet" type = "text/css">
+</head>
+<body>
+<center>
+    <header>
+        <img src="../static/warehouse.png" align="left" class="logo">
+        <a href="{{url_for('auth_bp.lk_index')}}">
+        <img align ="right" src="../static/lk.png" class="lk" alt="Кнопка">
+    </a>
+        <h1>Склад</h1>
+    </header><br>
+    <h1>{{report_info['title']}}: {{info}}</h1>
+    {{sub_title}}
+    <p>
+            <table>
+                <thead>
+                        <tr class = "tab_title">
+                            <td>{{report_info['name_1']}}</td>
+                            <td>{{report_info['name_2']}}</td>
+                            {% if report_info['name_3'] %}
+                                <td>{{report_info['name_3']}}</td>
+                            {% endif %}
+                            {% if report_info['name_4']%}
+                                <td>{{report_info['name_4']}}</td>
+                            {% endif %}
+                            {% if report_info['name_5'] %}
+                                <td>{{report_info['name_5']}}</td>
+                            {% endif %}
+                            {% if report_info['name_6']%}
+                                <td>{{report_info['name_6']}}</td>
+                            {% endif %}
+                            {% if report_info['name_7']%}
+                                <td>{{report_info['name_7']}}</td>
+                            {% endif %}
+                            {% if report_info['name_8']%}
+                                <td>{{report_info['name_8']}}</td>
+                            {% endif %}
+                        </tr>
+                </thead>
+                <tbody>
+                    {% for str in result %}
+                        <tr>
+                            <td>{{str[report_info['item_1']]}}</td>
+                            <td>{{str[report_info['item_2']]}}</td>
+                            {% if report_info['item_3'] %}
+                                <td>{{str[report_info['item_3']]}}</td>
+                            {% endif %}
+                            {% if report_info['item_4'] %}
+                                <td>{{str[report_info['item_4']]}}</td>
+                            {% endif %}
+                            {% if report_info['item_5'] %}
+                                <td>{{str[report_info['item_5']]}}</td>
+                            {% endif %}
+                            {% if report_info['item_6'] %}
+                                <td>{{str[report_info['item_6']]}}</td>
+                            {% endif %}
+                            {% if report_info['item_7']%}
+                                <td>{{str[report_info['item_7']]}}</td>
+                            {% endif %}
+                            {% if report_info['item_8'] %}
+                                <td>{{str[report_info['item_8']]}}</td>
+                            {% endif %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </p>
+    <a href = "{{url_for('bp_report.reports_menu')}}" style="color: #2271b3;">Вернуться в меню отчетов</a><br>
+    <a href = "/" style="color: #2271b3;">Вернуться в главное меню</a>
+</center>
+</body>
+</html>

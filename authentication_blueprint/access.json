@@ -1,0 +1,8 @@
+{
+  "admin": ["bp_query", "bp_report"],
+  "director": ["bp_query", "bp_report"],
+  "manager": ["bp_report"],
+  "ordinary": ["bp_query"],
+  "seller": ["business_bp"]
+}
+

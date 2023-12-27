@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main menu</title>
+    <link href = "{{url_for('static', filename = 'style1.css')}}"
+          rel = "stylesheet" type = "text/css">
+</head>
+<body>
+<center>
+    <header>
+        <img src="../static/warehouse.png" align="left" class="logo">
+        <a href="{{url_for('auth_bp.lk_index')}}">
+        <img align ="right" src="../static/lk.png" class="lk" alt="Кнопка">
+    </a>
+        <h1>Склад</h1>
+    </header><br>
+    <h2>Главное меню</h2>
+    <a style="text-decoration: none; color: black; font-size: 12pt" href="{{url_for('bp_query.start_index')}}"><button>
+        <b><center>Меню запросов</center></b></button></a><br><br>
+    <a style="text-decoration: none; color: black; font-size: 12pt" href="{{url_for('bp_report.reports_menu')}}"><button>
+        <b><center>Меню отчетов</center></b></button></a><br><br>
+    <a style="color: #2271b3" href="{{url_for('bp_query.query_exit_index')}}">ВЫХОД</a>
+
+</center>
+
+</body>
+</html>

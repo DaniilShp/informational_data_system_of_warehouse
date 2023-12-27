@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main menu</title>
+    <link href = "{{url_for('static', filename = 'style1.css')}}"
+          rel = "stylesheet" type = "text/css">
+</head>
+<body>
+<center>
+    <header>
+        <img src="../static/warehouse.png" align="left" class="logo">
+        <a href="{{url_for('auth_bp.lk_index')}}">
+        <img align ="right" src="../static/lk.png" class="lk" alt="Кнопка">
+    </a>
+        <h1>Склад</h1>
+    </header><br>
+    <h2>Меню запросов</h2>
+
+        <a style="text-decoration: none; color: black; font-size: 12pt" href="{{url_for('bp_query.query1_index')}}">
+            <button>
+            Показать все сведения о поставщиках, заключивших договора в заданную дату.
+            </button></a><br><br>
+
+        <a style="text-decoration: none; color: black; font-size: 12pt" href="{{url_for('bp_query.query2_index')}}">
+            <button>
+        Показать все сведения о поставщиках, заключивших договора в заданный период
+        </button></a><br><br>
+
+        <a style="text-decoration: none; color: black; font-size: 12pt" href="{{url_for('bp_query.query3_index')}}">
+            <button>
+            Показать всех поставщиков, у которых номера тел.
+        <br> имеют опр. префикс</button></a><br><br>
+
+        <a style="text-decoration: none; color: black; font-size: 12pt" href="{{url_for('bp_query.query4_index')}}">
+            <button>
+        Показать поставщиков, заключивших договор, но не совершивших поставку
+        </button></a><br><br>
+
+        <a style="text-decoration: none; color: black; font-size: 12pt" href="{{url_for('bp_query.query6_index')}}">
+            <button>
+                Показать все сведения об общей стоимости товаров, поставленных каждым поставщиком
+            </button>
+        </a><br><br>
+    <a style="color: #2271b3" href="/">Вернуться в главное меню</a>
+
+</center>
+
+</body>
+</html>

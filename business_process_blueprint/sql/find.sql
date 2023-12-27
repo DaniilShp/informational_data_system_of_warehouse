@@ -1,0 +1,1 @@
+select idproduct, shifr, measurerment_unit from product where idproduct=$id

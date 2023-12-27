@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>выбор отчета</title>
+    <link href = "{{url_for('static', filename = 'style1.css')}}"
+          rel = "stylesheet" type = "text/css">
+</head>
+<body>
+<center>
+    <header>
+        <img src="../static/warehouse.png" align="left" class="logo">
+        <a href="{{url_for('auth_bp.lk_index')}}">
+        <img align ="right" src="../static/lk.png" class="lk" alt="Кнопка">
+    </a>
+        <h1>Склад</h1>
+    </header><br>
+    <h2>Меню отчетов</h2>
+    <form method="POST" action="">
+        <button style="font-size: 12pt;" type="submit" name="user_choice" value="1">Отчет о стоимости поставок</button><br><br>
+        <button style="font-size: 12pt;" type="submit" name="user_choice" value="2">Отчет о количестве поставок на склад</button>
+    </form><br>
+    <a href = "/" style="color: #2271b3;">Вернуться в главное меню</a>
+</center>
+</body>
+</html>
